@@ -100,6 +100,15 @@ queue.toString();  // 큐에 저장된 값을 문자열로 변환
 
 백준) 1182 부분수열의 합, 2961 도영이가 만든 맛있는 음식
 
+##### 이진 트리
+1) 배열 `Stack<Integer>` - 1: 루트 노드
+2) 배열 - parent[i] = 부모 노드 idx
+3) 배열 {left, right}
+4) 2차원 리스트 `ArrayList<Integer[]>`
+
 ##### DFS
+1) 재귀
+2) 스택
 
 ##### BFS
+1) 큐
