@@ -142,3 +142,17 @@ queue.toString();  // 큐에 저장된 값을 문자열로 변환
 ##### 백트래킹
 해를 찾는 도중 막힌 경우 되돌아가서 다시 해를 찾아가는 기법
 1) 재귀를 이용한 DFS
+
+백준) 9663 N-Queen (가로/세로/대각선)
+
+<details>
+   <summary>체스 - 퀸</summary>
+   상하좌우, 대각선 4방향으로 거리 제한 없이 이동할 수 있는 기물
+</details>
+
+<details>
+   <summary>대각선</summary>
+   abs(y - y`) == abs(x - x')
+
+   기울기 = 1
+</details>
