@@ -25,11 +25,17 @@ Arrays.toString(배열);  // 1차원 배열의 값들을 출력
 Arrays.deepToString(배열);  // 2차원 이상의 배열의 값들을 출력
 Arrays.fill(배열, 값);  // 배열의 모든 값을 특정 값으로 변경 (초기화)
 Arrays.sort(배열);  // 배열을 오름차순으로 정렬
+// 2차원 배열 첫번째 값으로 정렬하되 같으면 두번째 값으로 정렬
+Arrays.sort(배열, (a, b) -> ((a[0] != b[0]) ? a[0] - b[0] : a[1] - b[1]));
 ```
 
 #### 리스트
 
 - ArrayList: 배열
+```java
+// 정렬
+Collections.sort(list, (a , b) -> a.length() - b.length());
+```
 - LinkedList: 이중 연결 리스트(Deque)
 ```java
 // Head
