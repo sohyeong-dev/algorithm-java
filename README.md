@@ -175,3 +175,31 @@ queue.toString();  // 큐에 저장된 값을 문자열로 변환
 3) 중앙값 < 타깃 데이터일 때 중앙값 기준으로 오른쪽 데이터셋을 선택한다.
 4) 중앙값 == 타깃 데이터일 때 탐색을 종료한다.
 5) start 와 end 가 엇갈린 경우 탐색을 종료한다. => 값이 없는 경우
+
+##### 유니온 파인드
+: 두 노드가 같은 그래프에 속하는지 판별하는 알고리즘 (DFS를 사용)  
+`int[] parent`
+1) Union 연산: 노드를 합치는 연산  
+   union 함수: 트리 압축
+   ```java
+   function union (int x, int y) {
+      x = find(x);
+      y = find(y);
+
+      if (x != y) {
+         if (x < y) parent[y] = x;
+         else parent[x] = y;
+      }
+   }   
+   ```
+3) Find 연산: 루트 노드를 찾는 연산  
+   find 함수: 루트 노드 탐색 (재귀)
+   ```java
+   function find(int x) {
+      if (parent[x] == x) return x;
+      return parent[x] = find(parent[x]);
+   }
+   ```
+
+##### 크루스칼 알고리즘
+: 유니온 파인트를 사용해서 최소신장트리를 구함
