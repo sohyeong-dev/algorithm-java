@@ -231,6 +231,9 @@ pq.isEmpty();   // 비어 있으면 true, 그렇지 않으면 false
 - 인접 리스트 (연결 리스트)
 - 최단거리 배열 초기화 (출발 노드 = 0, 나머지 = INF)
 - 한 단계 당 하나의 노드에 대한 최단 거리를 확실히 찾음
+  ```
+  min(distance[now] + weight[now][target], distance[target])
+  ```
 
 ##### 플로이드 워셜 알고리즘
 : (다이나믹 프로그래밍)
